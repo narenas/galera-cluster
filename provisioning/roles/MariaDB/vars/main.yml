@@ -1,0 +1,7 @@
+packages:
+  - MariaDB-server
+  - MariaDB-client
+  - galera-4
+  - policycoreutils-python
+
+ip_node_1: 192.168.

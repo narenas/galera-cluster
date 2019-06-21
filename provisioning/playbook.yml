@@ -1,0 +1,8 @@
+---
+- name: Install cluster 
+  hosts: nodes
+  become: true
+  roles:
+    - epel
+    - common
+    - MariaDB
