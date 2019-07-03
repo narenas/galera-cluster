@@ -1,0 +1,4 @@
+- name: Starts primary node 
+  shell: /usr/bin/galera_new_cluster
+  
+  

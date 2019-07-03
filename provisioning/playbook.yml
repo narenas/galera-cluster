@@ -6,3 +6,15 @@
     - epel
     - common
     - MariaDB
+
+- name: Setup Primary 
+  hosts: galera-1 
+  become: true 
+  roles: 
+    - primary 
+
+- name: Start replicas
+  hosts: replicas
+  become: true 
+  roles: 
+    - replicas
