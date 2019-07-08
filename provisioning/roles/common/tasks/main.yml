@@ -25,4 +25,11 @@
     state: present
   with_file: 
     - id_rsa.pub
+  
+
+- name: Update hosts file 
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+
 

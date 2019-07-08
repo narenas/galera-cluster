@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
   replicas = [] 
   (1..num_nodes).each do |i|
     nodes.push("galera-#{i}")
-    if num_nodes == 1
+    if i == 1
       primary.push("galera-#{i}")
     else
       replicas.push("galera-#{i}")
