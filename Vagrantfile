@@ -5,7 +5,7 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
-ENV['VAGRANT_DEFAULT_PROVIDER'] = 'libvirt'
+#ENV['VAGRANT_DEFAULT_PROVIDER'] = 'libvirt'
 Vagrant.configure("2") do |config|
 
   config.vm.provider :libvirt do |libvirt| 
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
 
   (1..num_nodes).each do |i| 
     config.vm.define "galera-#{i}" do |node| 
-      node.vm.box = "centos/7"
+      node.vm.box = "centos/8"
       node.vm.hostname = "galera-#{i}"
       node.vm.network :private_network, 
                       :libvirt__network_name =>  "galera-cluster" , 
