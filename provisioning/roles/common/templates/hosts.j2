@@ -6,3 +6,7 @@
 {% set short_name = item.split('.') %}
 {{ hostvars[item]['ansible_host'] }}  {{ item }} {{ short_name[0] }}
 {% endfor %}
+
+192.168.200.11 galera-1
+192.168.200.12 galera-2
+192.168.200.13 galera-3
